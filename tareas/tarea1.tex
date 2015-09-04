@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[spanish]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{graphicx}
+%\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead[L]{\includegraphics[scale=0.3]{udp.jpg}} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\author{Profesor:Juan Ricardo Giadach\\Ayudante:Víctor Manríquez Gallegos}
+\title{	
+\normalfont \normalsize 
+\textsc{Universidad Diego Portales\\Escuela de Informática y Telecomunicaciones} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Tarea 1 Programación Avanzada \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{Descripción del problema}
+Los niños insulino-dependientes, deben usar unas máquinas (diabetin-3000) que les aporten la cantidad de insulina suficiente, sin necesidad de múltiples inyecciones. Para esto la máquina maneja los niveles de glicemia del niño en cada segundo(rango ideal=80; rango peligroso=110 ), la cantidad de insulina disponible de la máquina (cantidad disponible inicial= 200ml), y la cantidad de insulina que el niño necesita (entre 1-1.5 mL).\\
+Se solicita construir una clase que controle el funcionamiento del Diabetin-3000 y que tenga los métodos necesarios para:\\
+\begin{itemize}
+
+\item \textit{Controlar} al niño diabético para obtener su nivel de glicemia actual ( aleatorio entre 70-130 ) y asignarlo a la máquina para próximo análisis.\\
+
+\item \textit{Medicar} al niño con la dosis adecuada para su estado ( 1 ml rango= 80 ; 1.5 ml rango = 110).\\
+
+\item \textit{Recargar} las municiones insulinicas del Diabetin-3000 en caso de que se agote o que no alcance para una nueva dosis. ( Que de aviso y recargue mediante menú).\\
+\item Y los métodos Set, Get y Process correspondientes.\\
+ \end{itemize}
+Junto con esto se solicita crear un programa principal (main) que permita la creación de instancias diabetin-3000 y así utilizar los métodos antes programados.
+%---------------------------
+
+\subsection{Funcionalidades Esperadas}
+\begin{itemize}
+\item El programa debe poder compilar y correr sin necesidad de arreglos.\\
+\item Debe cumplir con los métodos solicitados anteriormente, y se espera que cada método haga lo que se especifica.\\
+\item El programa principal, debe ser capaz de crear objetos Diabetin-3000 y poder simular el comportamiento que tendría con un niño diabético, donde la confirmación de su correcto funcionamiento, debe venir acompañado de salidas de datos (imprimir por pantalla) que indiquen el estado de la máquina dependiendo del estado del niño.\\
+\end{itemize}
+
+
+%------------------------------------------------
+\newpage
+\subsection{Condiciones de entrega}
+\begin{itemize}
+\item Debe realizarse de forma individual, por lo que cualquier tipo de copia, será sancionada con nota mínima (1.0).\\
+\item Se debe entregar 7 días después del envío y recepción de esta tarea (Viernes 11 de Septiembre).\\
+\item Cualquier duda debe ser presentada en Ayudantía o ubicar al ayudante durante el plazo de entrega.\\
+\item El código debe ser documentado y comentado ( en C++ se comenta usando // --> para comentar en la línea, o /* */ para comentar en más de una línea) para mayor entendimiento, en caso de tener una funcionalidad parcial o nula, para evitar una calificación mínima.\\
+\item Se deberá realizar un pequeño informe donde se explique con fundamentos de la cátedra, que se está realizando en el programa y porque.\\
+\end{itemize}
+
+%------------------------------------------------
+
+\subsection{Rúbrica de Evaluación}
+Dentro de esta evaluación se considerarán la siguientes ponderaciones a la hora de la revisión de la tarea.
+\begin{table}[h!]
+\centering
+\begin{tabular}{||l || c||}
+\hline
+\hline
+Item & Ponderación \\
+\hline
+Funcionalidad & 50\% \\
+Documentación & 30\% \\
+Informe & 15\% \\
+Ortografía & 5\% \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+\subsection{Dudas y Consultas}
+Cualquier duda o consulta, sobre la realización de la tarea, o sobre los contenidos de cátedra pueden realizarlas durante la ayudantía, o a cualquiera de mis datos de contacto:
+\begin{itemize}
+
+\item celular: 92103210
+\item facebook: fb.com/screaam.it
+\item correo Universidad: victor.manriquez@mail.udp.cl
+\end{itemize}
+\end{document}
